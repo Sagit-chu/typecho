@@ -1,8 +1,10 @@
 name: Release php docker
 
 on:
-  repository_dispatch:
   workflow_dispatch:
+  schedule:
+    - cron: 0 0 * * 6
+  
 
 jobs:
   build-docker:
